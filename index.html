@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="INFAME Soluciones Culinarias — picantes, aderezos, conservas y soluciones culinarias.">
+    <meta name="author" content="Sierra Remote Studio">
+    <title>INFAME Soluciones Culinarias</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!--
+        INFAME Soluciones Culinarias
+        Catálogo Digital
+        Diseño y desarrollo: Sierra Remote Studio
+        © 2026 Sierra Remote Studio
+    -->
+
+    <header class="site-header" id="inicio">
+        <div class="nav-shell">
+            <a class="brand" href="#inicio" aria-label="INFAME - Inicio">
+                <img
+                    class="brand-logo"
+                    src="assets/logo/infame-logo-principal.png"
+                    alt="INFAME Soluciones Culinarias"
+                >
+            </a>
+
+            <nav class="main-nav" aria-label="Navegación principal">
+                <a class="active" href="#inicio">Inicio</a>
+                <a href="#productos">Productos</a>
+                <a href="#negocios">Negocios</a>
+                <a href="#mayoristas">Mayoristas</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+
+            <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+
+        <nav class="mobile-nav" id="mobile-nav" aria-label="Navegación móvil">
+            <a href="#inicio">Inicio</a>
+            <a href="#productos">Productos</a>
+            <a href="#negocios">Negocios</a>
+            <a href="#mayoristas">Mayoristas</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO -->
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-copy">
+                <span class="eyebrow"><i></i> DEL CAMPO A LA COCINA</span>
+                <h1 id="hero-title">Sabores que<br>dejan huella</h1>
+                <p>Picantes, aderezos, conservas y soluciones culinarias hechas para transformar cada plato.</p>
+                <a href="#productos" class="primary-button">CONOCE INFAME <span>↓</span></a>
+            </div>
+
+            <div class="hero-products" aria-label="Productos destacados">
+                <div class="hero-product hero-product-main">
+                    <img src="assets/productos/habanero-infernal.png" alt="Habanero Infernal">
+                </div>
+                <div class="hero-product hero-product-top">
+                    <img src="assets/productos/ajo-brutal.png" alt="Ajo Brutal">
+                </div>
+                <div class="hero-product hero-product-bottom">
+                    <img src="assets/productos/red-pepper.png" alt="Red Pepper">
+                </div>
+            </div>
+
+            <div class="hero-stamp" aria-hidden="true">
+                <span>SABORES</span>
+                <span>CON</span>
+                <strong>CARÁCTER</strong>
+            </div>
+        </section>
+
+        <!-- INTRO -->
+        <section class="intro-section">
+            <div class="container intro-grid">
+                <h2>DEL CAMPO A LA COCINA</h2>
+                <p>INFAME reúne picantes, aderezos, conservas y soluciones culinarias en una propuesta de sabor artesanal y profesional.</p>
+            </div>
+        </section>
+
+        <!-- SHOWCASE -->
+        <section class="showcase-section" id="productos" aria-labelledby="showcase-title">
+            <div class="container">
+                <div class="section-heading">
+                    <div>
+                        <span class="section-kicker">SELECCIÓN INFAME</span>
+                        <h2 id="showcase-title">En el mostrador</h2>
+                    </div>
+                </div>
+
+                <div class="showcase" id="showcase">
+                    <div class="showcase-image">
+                        <img id="producto-imagen" src="" alt="" draggable="false">
+                    </div>
+
+                    <div class="showcase-info">
+                        <span class="showcase-label" id="producto-categoria"></span>
+                        <h3 id="producto-nombre"></h3>
+                        <p class="showcase-feature" id="producto-caracteristica"></p>
+                        <p class="showcase-description" id="producto-descripcion"></p>
+                        <p class="showcase-presentation">
+                            Presentación: <strong id="producto-presentacion"></strong>
+                        </p>
+                        <div class="showcase-price" id="producto-precio"></div>
+                    </div>
+
+                    <div class="showcase-controls" aria-label="Controles de productos">
+                        <button id="anterior-producto" type="button" aria-label="Producto anterior">‹</button>
+                        <button id="siguiente-producto" type="button" aria-label="Producto siguiente">›</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CATEGORÍAS -->
+        <section class="categories-section">
+            <div class="container">
+                <div class="section-heading simple">
+                    <div>
+                        <span class="section-kicker">LÍNEAS INFAME</span>
+                        <h2>Un sabor para cada ocasión</h2>
+                    </div>
+                </div>
+
+                <div class="category-grid">
+                    <a class="category-card category-premium" href="#productos">
+                        <span>LÍNEA</span>
+                        <strong>Premium</strong>
+                        <small>Sabores intensos y carácter.</small>
+                    </a>
+                    <a class="category-card category-clasica" href="#productos">
+                        <span>LÍNEA</span>
+                        <strong>Clásica</strong>
+                        <small>Equilibrio para todos los días.</small>
+                    </a>
+                    <a class="category-card category-conservas" href="#productos">
+                        <span>LÍNEA</span>
+                        <strong>Conservas y especias</strong>
+                        <small>Ingredientes que elevan cada preparación.</small>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEGOCIOS -->
+        <section class="business-section" id="negocios">
+            <div class="container business-grid">
+                <div>
+                    <span class="section-kicker light">PARA NEGOCIOS</span>
+                    <h2>Tu cocina también puede tener carácter.</h2>
+                    <p>Formatos pensados para restaurantes, comidas rápidas y negocios gastronómicos que necesitan rendimiento y sabor constante.</p>
+                </div>
+                <a href="#contacto" class="secondary-button">CONSULTAR FORMATOS <span>→</span></a>
+            </div>
+        </section>
+
+        <!-- MAYORISTAS -->
+        <section class="wholesale-section" id="mayoristas">
+            <div class="container wholesale-grid">
+                <div>
+                    <span class="section-kicker">VENTAS AL POR MAYOR</span>
+                    <h2>Soluciones para distribución y comercialización.</h2>
+                </div>
+                <p>Cajas listas para distribución y comercialización, con sellado de seguridad para conservar la frescura del producto.</p>
+            </div>
+        </section>
+
+        <!-- CONTACTO -->
+        <section class="contact-section" id="contacto">
+            <div class="container contact-box">
+                <div>
+                    <span class="section-kicker">HABLEMOS</span>
+                    <h2>Lleva INFAME a tu cocina o negocio.</h2>
+                    <p>Consulta productos, presentaciones y precios según tus necesidades.</p>
+                </div>
+                <a class="primary-button" href="tel:+573170282471">317 028 2471 <span>→</span></a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <strong>INFAME</strong>
+                <span>SOLUCIONES CULINARIAS</span>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-legal">
+                <p>© 2026 INFAME Soluciones Culinarias</p>
+                <p>Diseño y desarrollo digital por <span class="studio-credit">Sierra Remote Studio</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/productos.js"></script>
+</body>
+</html>
