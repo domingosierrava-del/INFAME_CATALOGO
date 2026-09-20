@@ -324,14 +324,16 @@ button { font: inherit; border: 0; cursor: pointer; }
     }
 
     .product-detail-image {
-        height: clamp(300px, 85vw, 420px);
+        height: auto;
         min-height: 0;
     }
 
     .product-detail-image img {
+        display: block;
+        width: 100%;
+        height: auto;
         min-height: 0;
-        height: 100%;
-        object-fit: contain;
+        object-fit: initial;
         object-position: center;
     }
 
