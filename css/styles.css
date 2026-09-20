@@ -331,6 +331,8 @@ button { font: inherit; border: 0; cursor: pointer; }
     .product-detail-image img {
         min-height: 0;
         height: 100%;
+        object-fit: contain;
+        object-position: center;
     }
 
     .product-detail-info {
