@@ -200,7 +200,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function mostrarProducto(indice, direccion = "next") {
 
-        const producto = productos[indice];
+    const producto = productos[indice];
+
+    if (!producto) {
+        return;
+    }
+
+    // Identificador para evitar que una carga anterior
+    // sobrescriba una selección más reciente.
+    const solicitud = ++mostrarProducto.solicitud;
+
+    // Pre-cargar la nueva imagen.
+    const nuevaImagen = new Image();
+
+    nuevaImagen.onload = () => {
+
+        // Si mientras cargaba se seleccionó otro producto,
+        // ignoramos esta carga anterior.
+        if (solicitud !== mostrarProducto.solicitud) {
+            return;
+        }
 
         showcase.classList.remove("is-next", "is-prev");
 
@@ -211,6 +230,11 @@ document.addEventListener("DOMContentLoaded", () => {
             direccion === "prev" ? "is-prev" : "is-next"
         );
 
+        // =====================================================
+        // CAMBIO SINCRONIZADO
+        // La imagen y toda la información cambian juntas.
+        // =====================================================
+
         imagen.src = producto.imagen;
         imagen.alt = producto.nombre;
 
@@ -219,13 +243,25 @@ document.addEventListener("DOMContentLoaded", () => {
         caracteristica.textContent = producto.caracteristica;
         descripcion.textContent = producto.descripcion;
         presentacion.textContent = producto.presentacion;
-
         precio.textContent = producto.precio;
 
-        // El detalle queda disponible como información adicional.
         precio.title = producto.detallePrecio;
-    }
+    };
 
+    nuevaImagen.onerror = () => {
+
+        console.error(
+            "INFAME: no se pudo cargar la imagen:",
+            producto.imagen
+        );
+
+    };
+
+    nuevaImagen.src = producto.imagen;
+}
+
+// Contador interno de solicitudes de cambio.
+mostrarProducto.solicitud = 0;
 
     /* ---------------------------------------------------------
        SIGUIENTE PRODUCTO
